@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+
+    grid-template-columns: 160px 660px 200px;
+    grid-template-rows: 40px 500px 40px;
+
+    grid-template-areas:
+        "header header header"
+        "sidebar editor extra"
+        "footer footer footer";
+
+    column-gap: 10px;
+    row-gap: 0px;
+
+    /* justify-items: stretch; */
+}
+html, body {
+    overscroll-behavior-y: contain;
+}
+#toolbox {
+    /* display:grid; */
+    grid-template-columns: auto auto;
+    border: 1px solid black;
+    grid-area: sidebar;
+
+    /* width: 140px; */
+    /* min-height: 480px; */
+    height: 480px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+#game_canvas {
+    border: 1px solid black;
+    grid-area: editor;
+    width: 640px;
+    height: 480px;
+    margin: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.tile {
+    margin: 2px;
+    padding: 10px;
+}
+#selected_div {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+#selected {
+    border: 1px solid black;
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    padding: 10px;
+}
+#buttons {
+    grid-area: extra;
+}
+#header {
+    grid-area: header;
+}

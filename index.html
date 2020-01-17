@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Map maker </title>
+		<script src="allegro.js"></script>
+		<script src="editor.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+				map-maker
+				&nbsp;
+				<input id="title" type="text" value="untitled map">
+			</div>
+
+			<div id="toolbox">
+				<img name="brick" class="tile" src="brick32.png"></img>
+				<img name="grass" class="tile" src="grass32.png"></img>
+				<div id="selected_div">
+					<p>Selected</p>
+					<div id="selected"></div>
+				</div>
+			</div>
+			<canvas id="game_canvas" width="640" height="480"></canvas>
+			<div id="buttons">
+				<button id="fill_button">Fill</button>
+				<button id="toggle_grid_button">Toggle grid</button>
+				<button id="open_button">
+					<label for="file-input" id="file-input-label">Open map</label>
+				</button>
+				<input type="file" id="file-input" accept="image/*" style="display: none;"/>
+				<button id="save_button">Save</button>
+			</div>
+		</div>
+	</body>
+</html>
